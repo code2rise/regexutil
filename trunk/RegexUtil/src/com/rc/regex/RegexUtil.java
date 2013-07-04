@@ -3,8 +3,17 @@ package com.rc.regex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @author Rupesh Chavan
+ * @version 1.0
+ *
+ */
 public class RegexUtil 
 {
+	/**
+	 * @param email E Mail address
+	 * @return boolean Flag demonstrating if it's a valid email
+	 */
 	public boolean isValidEmail(String email)
 	{	
 		boolean isValid = false;
@@ -16,6 +25,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param phone Mobile phone number
+	 * @return boolean Flag indicating if it's a valid mobile phone
+	 */
 	public boolean isValidMobilePhone(String phone)
 	{	
 		boolean isValid = false;		
@@ -36,6 +49,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param name Person's first name
+	 * @return boolean Flag indicating if it's a valid first name of person
+	 */
 	public boolean isValidFirstName(String name)
 	{
 		boolean isValid = false;
@@ -46,6 +63,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param name Person's last name
+	 * @return boolean Flag indicating if it's a valid last name
+	 */
 	public boolean isValidLastName(String name)
 	{
 		boolean isValid = false;
@@ -56,6 +77,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param uri URI/URL
+	 * @return boolean Flag indicating if it's valid URI / URL
+	 */
 	public boolean isValidURI(String uri)
 	{
 		boolean isValid = false;
@@ -66,6 +91,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param amount Amount number 
+	 * @return boolean Flag indicating if it's valid amount in dollar
+	 */
 	public boolean isValidAmountInDollar(String amount)
 	{
 		boolean isValid = false;
@@ -76,6 +105,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param fileName File name
+	 * @return boolean Flag indicating if it's valid file name
+	 */
 	public boolean isValidFileName(String fileName)
 	{
 		boolean isValid = false;
@@ -85,7 +118,12 @@ public class RegexUtil
 		
 		return isValid;
 	}
-	
+		
+	/**
+	 * @param fileName File name
+	 * @param fileExtension file extension that needs to be validated in the given file name
+	 * @return boolean Flag indicating if it's a valid file name along with it's provided extension.
+	 */
 	public boolean isValidFileName(String fileName, String fileExtension)
 	{
 		boolean isValid = false;
@@ -96,6 +134,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param s Input string
+	 * @return boolean Flag indicating if it's valid alpha numeric word
+	 */
 	public boolean isValidAlphaNumericWord(String s)
 	{
 		boolean isValid = false;
@@ -106,6 +148,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param c Input character
+	 * @return boolean Flag indicating if it's valid alpha numeric character
+	 */
 	public boolean isValidAlphaNumericCharacter(Character c)
 	{
 		boolean isValid = false;
@@ -116,6 +162,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param s Input string
+	 * @return boolean Flag indicating if it's valid alphabetic word 
+	 */
 	public boolean isAlphabeticWords(String s)
 	{
 		boolean isValid = false;
@@ -126,6 +176,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param c Input character
+	 * @return boolean Flag indicating if it's valid alphabetic character
+	 */
 	public boolean isAlphabeticCharacter(Character c)
 	{
 		boolean isValid = false;
@@ -136,6 +190,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param number Input number
+	 * @return boolean Flag indicating if it's valid hexadecimal number
+	 */
 	public boolean isValidHexadecimalNumber(int number)
 	{
 		boolean isValid = false;
@@ -146,6 +204,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param number Input number
+	 * @return boolean Flag indicating if it's valid octal number
+	 */
 	public boolean isValidOctalNumber(int number)
 	{
 		boolean isValid = false;
@@ -156,6 +218,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param number Input number
+	 * @return boolean Flag indicating if it's valid integer number
+	 */
 	public boolean isValidInteger(String number)
 	{
 		boolean isValid = false;
@@ -166,6 +232,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param number Input number
+	 * @return boolean Flag indicating if it's valid float number
+	 */
 	public boolean isValidFloat(String number)
 	{
 		boolean isValid = false;
@@ -176,6 +246,10 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	/**
+	 * @param s Input string
+	 * @return boolean Flag indicating if it's valid string
+	 */
 	public boolean isValidString(String s)
 	{
 		boolean isValid = false;
@@ -186,12 +260,16 @@ public class RegexUtil
 		return isValid;
 	}
 	
-	public boolean isValidDateFormat(String s)
+	/**
+	 * @param date Input date
+	 * @return boolean Flag indicating if date is in a valid format
+	 */
+	public boolean isValidDate(String date)
 	{
 		boolean isValid = false;
 		String expression = "^([\\d]{4})([-:/])((0?[1-9])|((1)([0-2])))([-:/])((0?[1-9])|((1)[0-9])|((2)[0-9])|((3)[0-1]))$";
 		
-		isValid = matchPattern(expression, s);
+		isValid = matchPattern(expression, date);
 		
 		return isValid;
 	}
@@ -218,7 +296,7 @@ public class RegexUtil
 //	{
 //		RegexUtil instance = new RegexUtil();
 		
-//		String email = "a@g.com";
+//		String email = "cr.rupesh007@g.com";
 //		
 //		System.out.println("Email valid : " + instance.isValidEmail(email));
 //		
@@ -268,6 +346,6 @@ public class RegexUtil
 //		System.out.println("String : " + instance.isValidString(s));
 		
 //		String date = "2013-2-31";
-//		System.out.println("Date : " + instance.isValidDateFormat(date));
+//		System.out.println("Date : " + instance.isValidDate(date));
 //	}
 }
