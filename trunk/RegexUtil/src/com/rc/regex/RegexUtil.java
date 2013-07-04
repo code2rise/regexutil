@@ -176,6 +176,26 @@ public class RegexUtil
 		return isValid;
 	}
 	
+	public boolean isValidString(String s)
+	{
+		boolean isValid = false;
+		String expression = "^[^<>`~!/@\\#}$%:;)(_^{&*=|'+]+$";
+		
+		isValid = matchPattern(expression, s);
+		
+		return isValid;
+	}
+	
+	public boolean isValidDateFormat(String s)
+	{
+		boolean isValid = false;
+		String expression = "^([\\d]{4})([-:/])((0?[1-9])|((1)([0-2])))([-:/])((0?[1-9])|((1)[0-9])|((2)[0-9])|((3)[0-1]))$";
+		
+		isValid = matchPattern(expression, s);
+		
+		return isValid;
+	}
+	
 	private boolean matchPattern(String expression, String stringPattern)
 	{
 		boolean isValid = false;
@@ -243,5 +263,11 @@ public class RegexUtil
 		
 //		Float number = .01f;
 //		System.out.println("Float number : " + instance.isValidFloat("02,34,432.01"));
+		
+//		String s = "This is just a test.";
+//		System.out.println("String : " + instance.isValidString(s));
+		
+//		String date = "2013-2-31";
+//		System.out.println("Date : " + instance.isValidDateFormat(date));
 //	}
 }
