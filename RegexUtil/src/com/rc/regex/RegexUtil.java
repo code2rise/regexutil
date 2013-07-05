@@ -296,7 +296,7 @@ public class RegexUtil
 //	{
 //		RegexUtil instance = new RegexUtil();
 		
-//		String email = "cr.rupesh007@g.com";
+//		String email = "alex.bach@g.com";
 //		
 //		System.out.println("Email valid : " + instance.isValidEmail(email));
 //		
