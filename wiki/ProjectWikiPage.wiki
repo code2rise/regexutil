@@ -3,7 +3,10 @@
 
 = Introduction =
 
-This class provides a set of functions which can be used for input validations. All the validation functions are implemented by using regular expressions.
+ * This class provides a set of functions which can be used for input validations. 
+ * All the validation functions are implemented by using regular expressions. 
+ * This is java based class which can be imported in any java project & simply call methods provided by it listed as below.
+ * You can find dummy examples of it's method usage in the commented main function section.
 
 
 = Details =
